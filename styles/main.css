@@ -1,0 +1,35 @@
+.main__title {
+  margin-top: 20px;
+
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 138px;
+  letter-spacing: -0.04em;
+}
+
+.movie_list{
+    width: 930px;
+    padding: 60px 70px;
+    background-color: #232323;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.input__film {
+  width: 411px;
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid rgba(243, 246, 249, 0.5);
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+}
+
+.input__film::placeholder {
+  color: #f3f6f9;
+  opacity: 0.5;
+}
