@@ -1,5 +1,6 @@
 .main__title {
   margin-top: 20px;
+  margin-left: 73px;
 
   font-size: 120px;
   font-weight: 400;
@@ -32,4 +33,24 @@
 .input__film::placeholder {
   color: #f3f6f9;
   opacity: 0.5;
+}
+
+.add_film__btn{
+    width: 62px;
+    height: 62px;
+    margin-left: 20px;
+    vertical-align: middle;
+
+    background-color: #6532F8;
+    border-radius: 1000px;
+    background-image: url(../resources/btn-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+    border: none;
+}
+
+.add_film__btn:active{
+    background-color: #4d13fc;
 }
