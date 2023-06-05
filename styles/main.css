@@ -8,11 +8,11 @@
   letter-spacing: -0.04em;
 }
 
-.movie_list{
-    width: 930px;
-    padding: 60px 70px;
-    background-color: #232323;
-    border-radius: 20px 20px 0px 0px;
+.movie_list {
+  width: 930px;
+  padding: 60px 70px;
+  background-color: #232323;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .input__film {
@@ -35,22 +35,22 @@
   opacity: 0.5;
 }
 
-.add_film__btn{
-    width: 62px;
-    height: 62px;
-    margin-left: 20px;
-    vertical-align: middle;
+.add_film__btn {
+  width: 62px;
+  height: 62px;
+  margin-left: 20px;
+  vertical-align: middle;
 
-    background-color: #6532F8;
-    border-radius: 1000px;
-    background-image: url(../resources/btn-arrow.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    cursor: pointer;
-    border: none;
+  background-color: #6532f8;
+  border-radius: 1000px;
+  background-image: url(../resources/btn-arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  border: none;
 }
 
-.add_film__btn:active{
-    background-color: #4d13fc;
+.add_film__btn:active {
+  background-color: #4d13fc;
 }
