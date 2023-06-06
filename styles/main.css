@@ -17,7 +17,7 @@
   margin-bottom: 87px;
 }
 
-.input__film_block{
+.input__film_block {
   margin-bottom: 40px;
 }
 
@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 
-.film__del{
+.film__del {
   width: 23px;
   height: 23px;
   border: none;
@@ -112,6 +112,6 @@
   text-decoration: line-through;
 }
 
-.film__item__hidden{
+.film__item__hidden {
   display: none;
 }
