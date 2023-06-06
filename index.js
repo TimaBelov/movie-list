@@ -8,12 +8,12 @@ const FILM_LIST_ITEM_DEL = "film__item__hidden";
 
 addFilmBtn.addEventListener("click", function () {
   if (filmInputNode.value != "") {
-    renderFilmList(filmInputNode.value);
+    renderFilm(filmInputNode.value);
     filmInputNode.value = "";
   }
 });
 
-function renderFilmList(filmName) {
+function renderFilm(filmName) {
   filmHTML = "";
   filmHTML += `<li class="film__item">
   <div class="film__info">
