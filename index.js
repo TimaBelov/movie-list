@@ -2,6 +2,8 @@ const addFilmBtn = document.querySelector(".js-add-film");
 const filmListNode = document.querySelector(".js-film-list");
 const filmInputNode = document.querySelector(".js-input-film");
 
+const FILM_WAS_SEEN_CLASSNAME = "film__checkbox__ON";
+
 filmArray = [];
 
 addFilmBtn.addEventListener("click", function () {
@@ -25,7 +27,17 @@ function renderFilmList() {
   filmListNode.innerHTML = filmHTML;
 }
 
-filmListNode.onclick = function (event) {
+filmListNode.addEventListener("click", function (event) {
   let target = event.target;
-  console.log(target);
-};
+  if (target.classList.contains("film__checkbox")) {
+    filmWasSeen(target);
+  }
+});
+
+function filmWasSeen(target) {
+  if (target.classList.contains(FILM_WAS_SEEN_CLASSNAME)) {
+    target.classList.remove(FILM_WAS_SEEN_CLASSNAME);
+  } else {
+    target.classList.add(FILM_WAS_SEEN_CLASSNAME);
+  }
+}
