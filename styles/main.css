@@ -15,6 +15,10 @@
   border-radius: 20px 20px 0px 0px;
 }
 
+.input__film_block{
+  margin-bottom: 40px;
+}
+
 .input__film {
   width: 411px;
   padding-bottom: 15px;
@@ -55,7 +59,7 @@
   background-color: #4d13fc;
 }
 
-.film__item{
+.film__item {
   display: flex;
   justify-content: space-between;
 
@@ -65,13 +69,13 @@
   letter-spacing: -0.02em;
 
   color: #fff;
-  background-color: #3A3939;
+  background-color: #3a3939;
   padding: 29px 20px;
   margin-bottom: 3px;
   border-radius: 10px;
 }
 
-.film__checkbox{
+.film__checkbox {
   width: 19px;
   height: 19px;
   border-radius: 100px;
@@ -81,6 +85,15 @@
   margin-right: 20px;
 }
 
-.film__checkbox__ON{
-  background-color: #6532F8;
+.film__checkbox__ON {
+  background-color: #6532f8;
+}
+
+.film__item__blackout {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.film__item__hidden{
+  display: none;
 }
