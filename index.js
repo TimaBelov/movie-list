@@ -7,15 +7,25 @@ const FILM_WAS_SEEN_CLASSNAME = "film__checkbox__ON";
 const BLACKOUT_ITEM = "film__item__blackout";
 const FILM_LIST_ITEM_DEL = "film__item__hidden";
 
-const checkInputText = (text) =>{
-  if (text == "" || !text.replace(/\s/g, "").length){
+let filmList = [];
+
+const checkInputText = (text) => {
+  if (text == "" || !text.replace(/\s/g, "").length) {
     statusNode.innerHTML = "Нельзя добавить пустое значение!";
-  }
-  else{
+  } else {
     renderFilm(text);
-    statusNode.innerHTML ="";
+    addFilmsToStorage(text);
+    statusNode.innerHTML = "";
   }
-}
+};
+
+const addFilmsToStorage = (filmName) => {
+  if (filmName !== null) {
+    filmList.unshift(filmName);
+  }
+  console.log(filmList)
+  localStorage.setItem("movieList", JSON.stringify(filmList));
+};
 
 addFilmBtn.addEventListener("click", function () {
   checkInputText(filmInputNode.value);
@@ -57,4 +67,21 @@ function filmWasSeen(target) {
 function filmDel(target) {
   let li = target.closest("li");
   li.classList.add(FILM_LIST_ITEM_DEL);
+  filmList = filmList.filter(function (f) {
+    return f !== li.innerText.trim();
+  });
+  filmList = filmList.filter(Boolean);
+  console.log(filmList);
+  addFilmsToStorage();
 }
+
+const init = () => {
+  filmList = JSON.parse(localStorage.getItem("movieList"));
+  filmList.reverse();
+  filmList = filmList.filter(Boolean);
+  filmList.forEach((item) => {
+    renderFilm(item);
+  });
+};
+
+init();
