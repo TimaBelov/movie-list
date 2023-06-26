@@ -1,16 +1,25 @@
 const addFilmBtn = document.querySelector(".js-add-film");
 const filmListNode = document.querySelector(".js-film-list");
 const filmInputNode = document.querySelector(".js-input-film");
+const statusNode = document.querySelector(".js-error-container");
 
 const FILM_WAS_SEEN_CLASSNAME = "film__checkbox__ON";
 const BLACKOUT_ITEM = "film__item__blackout";
 const FILM_LIST_ITEM_DEL = "film__item__hidden";
 
-addFilmBtn.addEventListener("click", function () {
-  if (filmInputNode.value != "") {
-    renderFilm(filmInputNode.value);
-    filmInputNode.value = "";
+const checkInputText = (text) =>{
+  if (text == "" || !text.replace(/\s/g, "").length){
+    statusNode.innerHTML = "Нельзя добавить пустое значение!";
   }
+  else{
+    renderFilm(text);
+    statusNode.innerHTML ="";
+  }
+}
+
+addFilmBtn.addEventListener("click", function () {
+  checkInputText(filmInputNode.value);
+  filmInputNode.value = "";
 });
 
 function renderFilm(filmName) {

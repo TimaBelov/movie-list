@@ -115,3 +115,7 @@
 .film__item__hidden {
   display: none;
 }
+
+.error_container{
+  color: red;
+}
