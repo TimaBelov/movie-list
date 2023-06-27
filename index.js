@@ -23,7 +23,6 @@ const addFilmsToStorage = (filmName) => {
   if (filmName !== null) {
     filmList.unshift(filmName);
   }
-  console.log(filmList)
   localStorage.setItem("movieList", JSON.stringify(filmList));
 };
 
@@ -67,11 +66,12 @@ function filmWasSeen(target) {
 function filmDel(target) {
   let li = target.closest("li");
   li.classList.add(FILM_LIST_ITEM_DEL);
+  console.log(filmList)
   filmList = filmList.filter(function (f) {
     return f !== li.innerText.trim();
   });
   filmList = filmList.filter(Boolean);
-  console.log(filmList);
+  filmList.reverse();
   addFilmsToStorage();
 }
 
