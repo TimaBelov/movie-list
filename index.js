@@ -7,7 +7,7 @@ const FILM_WAS_SEEN_CLASSNAME = "film__checkbox__ON";
 const BLACKOUT_ITEM = "film__item__blackout";
 const FILM_LIST_ITEM_DEL = "film__item__hidden";
 
-let filmList = [];
+let filmList = [null];
 
 const checkInputText = (text) => {
   if (text == "" || !text.replace(/\s/g, "").length) {
