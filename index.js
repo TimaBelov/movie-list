@@ -22,8 +22,9 @@ const checkInputText = (text) => {
 const addFilmsToStorage = (filmName) => {
   if (filmName !== null) {
     filmList.unshift(filmName);
+    localStorage.setItem("movieList", JSON.stringify(filmList));
   }
-  localStorage.setItem("movieList", JSON.stringify(filmList));
+  
 };
 
 addFilmBtn.addEventListener("click", function () {
